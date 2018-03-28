@@ -13,7 +13,7 @@ client.on('message', message => {
          .setColor(0xff0000)
     message.channel.sendEmbed(embed);
  
-  }
+}
 //SERVERINFO
 if (message.content.startsWith(prefix + 'serverinfo')) {
   const embed = new Discord.RichEmbed()
