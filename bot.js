@@ -30,8 +30,9 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 //SCA
     if (message.content === 'ping') {
       const embed = new Discord.RichEmbed()
-      embed.addField('Salut,am fost creat de _xProMDFKx_ n/ n/Comezni: /say')
+      embed.addField('Salut,am fost creat de _xProMDFKx_            ***Comenzi***       /say, /serverinfo, /mass, /help')
       embed.setColor(0xFF8B00)
+      embed.setThumbnail(message.guild.iconURL)
       message.channel.sendEmbed(embed)
     }
 });
