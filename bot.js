@@ -33,13 +33,6 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   	}
 });
 
- if(args[1]) {
-     client.guilds.forEach(guild => {
-guild.members.forEach(member => {
-member.send(reason)
-message.delete()
-});
-
 client.on("ready", () => {
     console.log("On " + client.guilds.size + " guilds.")
     console.log("With " + client.users.size + " members.")
