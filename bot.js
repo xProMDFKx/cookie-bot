@@ -8,7 +8,7 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
-  	}
+}
 });
 
 exports.run = function(client, message, args) {
@@ -16,7 +16,7 @@ exports.run = function(client, message, args) {
   message.channel.fetchMessages({
     limit: messagecount
   }).then(messages => message.channel.bulkDelete(messages));
-  	}
+}
 });
 
 // THIS  MUST  BE  THIS  WAY
