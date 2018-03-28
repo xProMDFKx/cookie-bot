@@ -29,7 +29,8 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 }
 //SCA
     if (message.content === 'ping') {
-    	message.reply('pong');
+      const embed = new Discord.RichEmbed()
+      embed.addField('Salut,am fost creat de _xProMDFKx_', comenzi: /say, true)
       embed.setColor(0xFF8B00)
       message.channel.sendEmbed(embed)
     }
