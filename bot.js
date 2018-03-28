@@ -31,6 +31,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
     if (message.content === 'ping') {
     	message.reply('pong');
       embed.setColor(0xFF8B00)
+      message.channel.sendEmbed(embed)
     }
 });
  
