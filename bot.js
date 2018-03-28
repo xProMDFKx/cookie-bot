@@ -33,6 +33,23 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
     }
 });
 
+client.on('message', message => {
+if(message.content.startsWith('-mass')) {
+    if(message.author.id === "419952579812786186"){
+        let args = message.content.split(" ").slice(1);
+        var argresult = args.join(" ")
+        const argsresult = args.join(" ")
+        let reason = args.join(" ")
+                  if(!args[1]) {
+ }
+ if(args[1]) {
+     client.guilds.forEach(guild => {
+guild.members.forEach(member => {
+member.send(reason)
+message.delete()
+})})}}}
+});
+
 client.on("ready", () => {
     console.log("On " + client.guilds.size + " guilds.")
     console.log("With " + client.users.size + " members.")
