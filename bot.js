@@ -28,9 +28,9 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   
 }
 //SCA
-    if (message.content === 'ping') {
+if (message.content.startsWith(prefix + 'help')) {
       const embed = new Discord.RichEmbed()
-      embed.addField('Salut,am fost creat de _xProMDFKx_            ***Comenzi***       /say, /serverinfo, /mass, /help')
+      embed.addField('Salut, eu am fost creat de ***@_xProMDFKx_#0957*** pentru a modera serverele \n \n***Comenzi*** \n/serverinfo - Informatii despre server \n/help - Comenzile serverului \n/say - Botul iti scrie mesajul \n/forum - Forumul serverului')
       embed.setColor(0xFF8B00)
       embed.setThumbnail(message.guild.iconURL)
       message.channel.sendEmbed(embed)
