@@ -38,7 +38,6 @@ client.on('message', message => {
         purge(); // Make sure this is inside the if(msg.startsWith)
 
     }
-});
 //SAY
   if(message.content.startsWith(prefix + "say"))  {
          message.delete()
