@@ -30,7 +30,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 //SCA
     if (message.content === 'ping') {
       const embed = new Discord.RichEmbed()
-      embed.addField('Salut,am fost creat de _xProMDFKx_ /n /nComezni: /say')
+      embed.addField('Salut,am fost creat de _xProMDFKx_ n/ n/Comezni: /say')
       embed.setColor(0xFF8B00)
       message.channel.sendEmbed(embed)
     }
