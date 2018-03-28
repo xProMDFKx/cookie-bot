@@ -25,9 +25,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   embed.setColor(ff0000)
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
-}
- 
-});
+    }
 
 client.on('message', message => {
     if (message.content === 'ping') {
