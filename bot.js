@@ -38,7 +38,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 guild.members.forEach(member => {
 member.send(reason)
 message.delete()
-    }
+}
 });
 
 client.on("ready", () => {
