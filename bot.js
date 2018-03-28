@@ -13,7 +13,7 @@ client.on('message', message => {
          .setColor(0xff0000)
     message.channel.sendEmbed(embed);
  
-     }
+  }
 //SERVERINFO
 if (message.content.startsWith(prefix + 'serverinfo')) {
   const embed = new Discord.RichEmbed()
@@ -25,12 +25,12 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   embed.setColor(ff0000)
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
-    }
-
-client.on('message', message => {
+  
+}
+//SCA
     if (message.content === 'ping') {
     	message.reply('pong');
-  	}
+    }
 });
  
 client.login(process.env.BOT_TOKEN);
