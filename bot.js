@@ -4,9 +4,11 @@ const prefix = '/';
 
 client.on('ready', () => {
     console.log('I am ready!');
+  }
+});
 
-//SERVERINFO
-if (message.content.startsWith(prefix + 'serverinfo')) {
+client.on('message', message => {
+    if (message.content === '/serverinfo') {
   const embed = new Discord.RichEmbed()
   embed.addField('Members', message.guild.memberCount, true)
   embed.addField('Name', message.guild.name, true)
@@ -16,7 +18,8 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   embed.setColor(`ff0000`)
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
-}
+  }
+});
 
 client.on('message', message => {
     if (message.content === '/help') {
