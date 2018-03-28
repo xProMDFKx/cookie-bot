@@ -4,7 +4,6 @@ const prefix = '/';
 
 client.on('ready', () => {
     console.log('I am ready!');
-});
 
 //SERVERINFO
 if (message.content.startsWith(prefix + 'serverinfo')) {
