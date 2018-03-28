@@ -22,7 +22,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   embed.addField('Region', message.guild.region, true)
   embed.addField('Owner', message.guild.owner, true)
   embed.addField('ID', message.guild.id, true)
-  embed.setColor(0xff0000)
+  embed.setColor(0xFF8B00)
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
   
