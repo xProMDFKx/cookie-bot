@@ -16,13 +16,12 @@ client.on('message', message => {
   embed.setColor(`ff0000`)
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
-  }
-});
+   }
 
 client.on('message', message => {
     if (message.content === '/help') {
     	message.reply('pong');
-  }
+   }
 });
 
 // THIS  MUST  BE  THIS  WAY
