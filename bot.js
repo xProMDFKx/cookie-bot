@@ -10,7 +10,7 @@ client.on('message', message => {
          message.delete()
          const embed = new Discord.RichEmbed()
          .setDescription(args.join(" "))
-         .setColor(0xff0000)
+         .setColor(0xFF8B00)
     message.channel.sendEmbed(embed);
  
 }
@@ -30,6 +30,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 //SCA
     if (message.content === 'ping') {
     	message.reply('pong');
+      embed.setColor(0xFF8B00)
     }
 });
  
