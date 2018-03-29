@@ -28,13 +28,19 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   
 }
 //SCA
-    if (message.content === 'ping') {
+    if (message.content === '/help') {
     	message.reply('Salut, eu am fost creat de ***@_xProMDFKx_#0957*** pentru a modera serverele \n \n***Comenzi*** \n/serverinfo - Informatii despre server \n/help - Comenzile serverului \n/say - Botul iti scrie mesajul \n/forum - Forumul serverului');
       
     }  
 //SFSA
-    if (message.content === 'ping') {
+    if (message.content === 'pinsg') {
     	message.reply('<User> Pong! (took: ${msg.createdTimestamp - message.createdTimestamp}ms)');
+    }
+});
+
+client.on('message', message => {
+    if(message.content.startsWith("!ping")) {
+            message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
     }
 });
 
