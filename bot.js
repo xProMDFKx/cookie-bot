@@ -40,10 +40,10 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 
 client.on('message', message => {
     if(message.content.startsWith("/ping")) {
-            message.reply(new Date().getTime() - message.createdTimestamp + " ms, pingul tau");        
+            message.reply(new Date().getTime() - message.createdTimestamp + " ms, pingul tau");      
+      
     }
-});
-  
+//SERVERINFO
   if(command === "kick") {
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit: 
