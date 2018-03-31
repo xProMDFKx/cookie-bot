@@ -38,7 +38,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
       
     }
 //SFSA
-    if (command == "mute") { // creates the command mute
+    if (message.command == "mute") { // creates the command mute
         if (!message.member.roles.some(r=>["Administrator"].includes(r.name)) ) return message.reply("Sorry, you do not have the permission to do this!"); // if author has no perms
         var mutedmember = message.mentions.members.first(); // sets the mentioned user to the var kickedmember
         if (!mutedmember) return message.reply("Please mention a valid member of this server!") // if there is no kickedmmeber var
