@@ -33,8 +33,9 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
       
     }  
 //SFSA
-    if (message.content === 'pinsg') {
-    	message.reply('<User> Pong! (took: ${msg.createdTimestamp - message.createdTimestamp}ms)');
+    if (message.content === "cookie") { // creates the command cookie
+        if (args[1]) message.channel.send(message.author.toString() + " has given " + args[1].toString() + " a cookie! :cookie:") // sends the message saying someone has given someone else a cookie if someone mentions someone else
+        else message.channel.send("Who do you want to send a cookie to? :cookie: (Correct usage: *cookie @username)") // sends the error message if no-one is mentioned
       
     }
 //SASASA
