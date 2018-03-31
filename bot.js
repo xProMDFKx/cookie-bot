@@ -42,7 +42,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
     if (message.content === "/forum") { // creates the command cookie
   const embed = new Discord.RichEmbed()
   embed.setTitle("**Forum**\n")
-  embed.addField('Cookie-NetWork.Org/Forum', message.guild.memberCount, true)
+  embed.addField('Cookie-NetWork.Org/Forum')
   embed.setColor(0xFF8B00)
   embed.setField(message.guild.iconURL)
   message.channel.sendEmbed(embed)
