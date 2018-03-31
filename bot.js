@@ -35,13 +35,18 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 //SFSA
     if (message.content === 'pinsg') {
     	message.reply('<User> Pong! (took: ${msg.createdTimestamp - message.createdTimestamp}ms)');
-      
     }
-//SCAS
-    if (message.content === "kick") {
-  let member = message.mentions.members.first();
-  let reason = args.slice(1).join(" ");
-  member.kick(reason);
+});
+
+client.on("guildMemberAdd", (member) => {
+  const guild = member.guild;
+  newUsers.set(member.id, member.user);
+
+  if (newUsers.size > 10) {
+    const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
+    const userlist = newUsers.map(u => u.toString()).join(" ");
+    defaultChannel.send("Welcome our new users!\n" + userlist);
+    newUsers.clear();
     }
 });
 
