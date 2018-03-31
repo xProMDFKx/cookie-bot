@@ -29,22 +29,27 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 }
 //SCA
     if (message.content === '/help') {
-    	message.reply('Salut, eu am fost creat de ***@_xProMDFKx_#0957*** pentru a modera serverele \n \n***Comenzi*** \n/serverinfo - Informatii despre server \n/help - Comenzile serverului \n/say - Botul iti scrie mesajul \n/forum - Forumul serverului');
+    	message.reply('Salut, eu am fost creat de ***@_xProMDFKx_#0957*** pentru a modera serverele \n \n***Comenzi*** \n/serverinfo - Informatii despre server \n/help - Comenzile serverului \n/say - Botul iti scrie mesajul \n/forum - Forumul serverului \n/ping - Vezi pingul tau \n/cookie - Trimite cuiva o prajiturica');
       
     }  
 //SFSA
-    if (message.content === "cookie") { // creates the command cookie
+    if (message.content === "/cookie") { // creates the command cookie
         if (args[1]) message.channel.send(message.author.toString() + " has given " + args[1].toString() + " a cookie! :cookie:") // sends the message saying someone has given someone else a cookie if someone mentions someone else
-        else message.channel.send("Who do you want to send a cookie to? :cookie: (Correct usage: *cookie @username)") // sends the error message if no-one is mentioned
+        else message.channel.send("Vrei sa ii trimi cuiva o prajitura? :cookie: (Exemplu: /cookie @username)") // sends the error message if no-one is mentioned
       
     }
 //SFSA
-    if (message.content === "cookie @") { // creates the command cookie
-    	message.reply('Felicitari, iai trimis o prajiturica acelei persoane :cookie:');
+    if (message.content === "/forum") { // creates the command cookie
+  const embed = new Discord.RichEmbed()
+  embed.setTitle("**Forum**\n")
+  embed.addField('Cookie-NetWork.Org/Forum', message.guild.memberCount, true)
+  embed.setColor(0xFF8B00)
+  embed.setThumbnail(message.guild.iconURL)
+  message.channel.sendEmbed(embed)
       
     }
 //SASASA
-if (message.content.startsWith(prefix + 'serverinfo')) {
+if (message.content.startsWith(prefix + 'serverinfo1235')) {
   const embed = new Discord.RichEmbed()
   embed.setTitle("**List of Commands**\n") // sets the title to List of Commands
   embed.addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
