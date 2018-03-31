@@ -38,7 +38,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
       
     }
 //SFSA
-    if (message.content === "heslp") { // creates a command *help
+    if (message.content === 'heslp') { // creates a command *help
         var embedhelpmember = new Discord.RichEmbed() // sets a embed box to the variable embedhelpmember
             .setTitle("**List of Commands**\n") // sets the title to List of Commands
             .addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
