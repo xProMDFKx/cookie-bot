@@ -35,18 +35,21 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
 //SFSA
     if (message.content === 'pinsg') {
     	message.reply('<User> Pong! (took: ${msg.createdTimestamp - message.createdTimestamp}ms)');
+      
     }
-});
-
-client.on("guildMemberAdd", (member) => {
-  const guild = member.guild;
-  newUsers.set(member.id, member.user);
-
-  if (newUsers.size > 10) {
-    const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
-    const userlist = newUsers.map(u => u.toString()).join(" ");
-    defaultChannel.send("Welcome our new users!\n" + userlist);
-    newUsers.clear();
+//SFSA
+    if (message.content == "kick") { // creates the command kick
+        if (!message.member.roles.some(r=>["Administrator"].includes(r.name)) ) return message.reply("Sorry, you do not have the permission to do this!"); // if author has no perms
+        var kickedmember = message.mentions.members.first(); // sets the mentioned user to the var kickedmember
+        if (!kickedmember) return message.reply("Please mention a valid member of this server!") // if there is no kickedmmeber var
+        if (!kickedmember.kickable) return message.reply("I cannot kick this member!") // if the member is unkickable
+        var kickreasondelete = 10 + kickedmember.user.id.length //sets the length of the kickreasondelete
+        var kickreason = message.content.substring(kickreasondelete).split(" "); // deletes the first letters until it reaches the reason
+        var kickreason = kickreason.join(" "); // joins the list kickreason into one line
+        if (!kickreason) return message.reply("Please indicate a reason for the kick!") // if no reason
+        kickedmember.kick(kickreason) //if reason, kick
+            .catch(error => message.reply(`Sorry @${message.author} I couldn't kick because of : ${error}`)); //if error, display error
+        message.reply(`${kickedmember.user.username} has been kicked by ${message.author.username} because: ${kickreason}`); // sends a message saying he was kicked
     }
 });
 
