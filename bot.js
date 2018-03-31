@@ -10,7 +10,7 @@ client.on('message', message => {
          message.delete()
          const embed = new Discord.RichEmbed()
          .setDescription(args.join(" "))
-         .setColor(0xFF8B00)
+         .setColor(0xFF7E00)
     message.channel.sendEmbed(embed);
  
 }
@@ -22,7 +22,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   embed.addField('Region', message.guild.region, true)
   embed.addField('Owner', message.guild.owner, true)
   embed.addField('ID', message.guild.id, true)
-  embed.setColor(0xFF8B00)
+  embed.setColor(0xFF7E00)
   embed.setThumbnail(message.guild.iconURL)
   message.channel.sendEmbed(embed)
   
@@ -42,8 +42,8 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
     if (message.content === "/forum") { // creates the command cookie
   const embed = new Discord.RichEmbed()
   embed.setTitle("**Forum**\n")
-  embed.addField('Cookie-NetWork.Org/Forum', message.Join, true)
-  embed.setColor(0xFF8B00)
+  embed.addField('Cookie-NetWork.Org/Forum', message.Join, false)
+  embed.setColor(0xFF7E00)
   message.channel.sendEmbed(embed)
       
     }
