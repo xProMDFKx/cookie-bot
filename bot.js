@@ -44,7 +44,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   embed.setTitle("**Forum**\n")
   embed.addField('Cookie-NetWork.Org/Forum', message.guild.memberCount, true)
   embed.setColor(0xFF8B00)
-  embed.setThumbnail(message.guild.iconURL)
+  embed.setField(message.guild.iconURL)
   message.channel.sendEmbed(embed)
       
     }
