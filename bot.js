@@ -42,9 +42,8 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
     if (message.content === "/forum") { // creates the command cookie
   const embed = new Discord.RichEmbed()
   embed.setTitle("**Forum**\n")
-  embed.addField('Cookie-NetWork.Org/Forum', message, true)
+  embed.addField('Cookie-NetWork.Org/Forum', message.Join, true)
   embed.setColor(0xFF8B00)
-  embed.addField('Nu uita sa te inregistrezi', message.guild.iconURL, true)
   message.channel.sendEmbed(embed)
       
     }
