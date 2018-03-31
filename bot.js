@@ -38,7 +38,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
       
     }
 //SCAS
-    if (message.content === 'purge') {
+    if (command === 'purge') {
     // This command removes all messages from all users in the channel, up to 100.
     
     // get the delete count, as an actual number.
