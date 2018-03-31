@@ -38,7 +38,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
       
     }
 //SCAS
-  if(command === "kick") {
+    if (message.content === "kick") {
   let member = message.mentions.members.first();
   let reason = args.slice(1).join(" ");
   member.kick(reason);
