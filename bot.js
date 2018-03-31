@@ -38,6 +38,11 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
         else message.channel.send("Who do you want to send a cookie to? :cookie: (Correct usage: *cookie @username)") // sends the error message if no-one is mentioned
       
     }
+//SFSA
+    if (message.content === "cookie @") { // creates the command cookie
+    	message.reply('Felicitari, iai trimis o prajiturica acelei persoane :cookie:');
+      
+    }
 //SASASA
 if (message.content.startsWith(prefix + 'serverinfo')) {
   const embed = new Discord.RichEmbed()
