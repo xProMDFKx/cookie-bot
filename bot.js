@@ -37,17 +37,18 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
     	message.reply('<User> Pong! (took: ${msg.createdTimestamp - message.createdTimestamp}ms)');
       
     }
-//SFSA
-    if (message.content === '/help1') { // creates a command *help
+//SASASA
+if (message.content.startsWith(prefix + 'serverinfo')) {
   const embed = new Discord.RichEmbed()
-            embed.setTitle("**List of Commands**\n") // sets the title to List of Commands
-            embed.addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
-            embed.addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
-            embed.addField(" - ping", "Tests your ping (Correct usage: *ping)") // sets the second field to explain the command *ping
-            embed.addField(" - cookie", "Sends a cookie to the desired player! :cookie: (Correct usage: *cookie @username)") // sets the third field to explain the command *cookie
-            embed.addField(" - 8ball", "Answers to all of your questions! (Correct usage: *8ball [question])") // sets the field to the 8ball command
-            embed.setColor(0xFF8B00) // sets the color of the embed box to orange
-            embed.setFooter("You need help, do you?") // sets the footer to "You need help, do you?"
+  embed.setTitle("**List of Commands**\n") // sets the title to List of Commands
+  embed.addField(" - help", "Displays this message (Correct usage: *help)") // sets the first field to explain the command *help
+  embed.addField(" - info", "Tells info about myself :grin:") // sets the field information about the command *info
+  embed.addField(" - ping", "Tests your ping (Correct usage: *ping)") // sets the second field to explain the command *ping
+  embed.addField(" - cookie", "Sends a cookie to the desired player! :cookie: (Correct usage: *cookie @username)") // sets the third field to explain the command *cookie
+  embed.addField(" - 8ball", "Answers to all of your questions! (Correct usage: *8ball [question])") // sets the field to the 8ball command
+  embed.setColor(0xFF8B00) // sets the color of the embed box to orange
+  embed.setFooter("You need help, do you?") // sets the footer to "You need help, do you?"
+  message.channel.sendEmbed(embed)
     }
 });
 
