@@ -59,7 +59,7 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
       return message.reply("Please indicate a reason for the kick!");
     
     // Now, time for a swift kick in the nuts!
-    await member.kick(reason)
+    member.kick(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
     message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
     }
