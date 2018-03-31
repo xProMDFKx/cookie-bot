@@ -48,16 +48,6 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
             embed.addField(" - 8ball", "Answers to all of your questions! (Correct usage: *8ball [question])") // sets the field to the 8ball command
             embed.setColor(0xFF8B00) // sets the color of the embed box to orange
             embed.setFooter("You need help, do you?") // sets the footer to "You need help, do you?"
-  const embed = new Discord.RichEmbed()
-            embed.setTitle("**List of Admin Commands**\n") // sets the title
-            embed.addField(" - say", "Makes the bot say whatever you want (Correct usage: *say [message])")
-            embed.addField(" - mute", "Mutes a desired member with a reason (Coorect usage: *mute @username [reason])") // sets a field
-            embed.addField(" - unmute", "Unmutes a muted player (Correct usage: *unmute @username)")
-            embed.addField(" - kick", "Kicks a desired member with a reason (Correct usage: *kick @username [reason])") //sets a field
-            embed.setColor(0xFF8B00) // sets a color
-            embed.setFooter("Ooo, an admin!") // sets the footer
-        message.channel.send(embedhelpmember); // sends the embed box "embedhelpmember" to the chatif
-        if(message.member.roles.some(r=>["Administrator"].includes(r.name)) ) return message.channel.send(embedhelpadmin); // if member is a botadmin, display this too
     }
 });
 
