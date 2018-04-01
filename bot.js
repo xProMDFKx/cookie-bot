@@ -5,7 +5,6 @@ const prefix = "/"
 client.on('message', message => {
   let args = message.content.split(" ").slice(1);
   
-}
 //SERVERINFO
 if (message.content.startsWith(prefix + 'serverinfo')) {
   const embed = new Discord.RichEmbed()
